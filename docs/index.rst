@@ -23,8 +23,9 @@ For more information, see :doc:`ebblog`.
 ebgeo
 -----
 
-The eb map system. This is mostly used for rendering and serving map
-tiles with Mapnik. This package is optional and not installed by default.
+The eb map system. This is mostly used for rendering and serving your
+own map tiles with Mapnik, in case there is no suitable hosted map
+solution for you.  OpenGeo Suite or TileMill might also be good solutions.
 
 For more information, see :doc:`ebgeo`.
 
