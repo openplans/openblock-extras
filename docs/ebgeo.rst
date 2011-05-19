@@ -62,6 +62,35 @@ on your Python path. Then create a directory called "mapnik" within your
 "python -c 'import sys; print sys.prefix'"). This is the directory where
 you should place your Mapnik style XML files.
 
+
+Settings
+========
+
+You need to configure the PostGIS connection for your map server.
+Add these to your settings.py::
+
+  MAPS_POSTGIS_HOST = '127.0.0.1'
+  MAPS_POSTGIS_USER = ''
+  MAPS_POSTGIS_PASS = ''
+  MAPS_POSTGIS_DB = ''
+
+You also need to configure what projection and units are used in your
+maps::
+
+  SPATIAL_REF_SYS = '900913' # Spherical Mercator
+  MAP_UNITS = 'm' # see ebpub.utils.mapmath for allowed unit types
+
+And if you want to use Tilecache, add these::
+
+  # Filesystem location of tilecache config (e.g., '/etc/tilecache/tilecache.cfg').
+  # obdemo doesn't use a tilecache out of the box.
+  TILECACHE_CONFIG = '/etc/tilecache.cfg'
+  TILECACHE_ZOOM = 17
+  TILECACHE_LAYER = 'osm'
+  TILECACHE_VERSION = '1.0.0'
+  TILECACHE_EXTENSION = 'png'
+
+
 Rendering map tiles
 ===================
 
